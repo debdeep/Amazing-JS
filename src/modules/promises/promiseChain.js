@@ -3,7 +3,6 @@
  * Starts by fetching data, then processes it, saves it, and logs the final result.
  * Handles errors with a catch block.
  */
-// Example of promise chaining in JavaScript
 
 /**
  * Simulates fetching data asynchronously.
@@ -48,7 +47,7 @@ fetchData()
     .then(processData)
     .then(saveData)
     .then(result => {
-        console.log(result); // Output: Data fetched processed saved
+        console.log(result); // Output: Data fetched, processed & saved
     })
     .catch(error => {
         console.error('Error:', error);

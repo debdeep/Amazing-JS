@@ -2,7 +2,7 @@
     - In JavaScript, a Promise is an object representing the eventual completion (or failure) of an Asynchronous operation and its resulting value 
 ## States
     - Pending, Resolved, Rejected
-## Methods
+## Base Methods
     - Promise.resolve()
     - Promise.reject()
 ## Purpose
@@ -19,3 +19,8 @@
     - Debugging Challenges in case of long chain
     - Not Ideal for Synchronous Code
     - promises are not lazy
+### Adhoc Methods
+    - Promise.all(iterable)
+    - Promise.allSettled(iterable)
+    - Promise.race(iterable)
+    - Promise.any(iterable)
