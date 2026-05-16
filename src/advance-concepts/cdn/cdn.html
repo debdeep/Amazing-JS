@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Vue 3 CDN Example</title>
+        <!-- Vue 3 CDN -->
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    </head>
+
+    <body>
+        <div id="app">
+            <h1>{{ message }}</h1>
+            <button @click="count++">Clicked {{ count }} times</button>
+        </div>
+
+        <script>
+            const { createApp } = Vue;
+
+            createApp({
+                data() {
+                    return {
+                        message: "Hello Vue 3 via CDN!",
+                        count: 0
+                    };
+                }
+            }).mount("#app");
+        </script>
+    </body>
+</html>

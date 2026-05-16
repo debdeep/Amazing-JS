@@ -8,7 +8,7 @@ function arrayFlatRecursive(arr) {
 }
 
 // Test cases
-console.log(arrayFlatRecursive([1, 2, [3, 4], [[5, 6]], [[[7, 8]]]])); // Output: [1, 2, 3, 4, 5, 6, 7, 8]
-console.log(arrayFlatRecursive([1, [2, [3, [4, [5]]]], 6])); // Output: [1, 2, 3, 4, 5, 6]
-console.log(arrayFlatRecursive([1, 2, 3])); // Output: [1, 2, 3]
-console.log(arrayFlatRecursive([])); // Output: []
+console.log(arrayFlatRecursive([1, 2, [3, 4], [[5, 6]], [[[7, 8]]]])); // [1, 2, 3, 4, 5, 6, 7, 8]
+console.log(arrayFlatRecursive([1, [2, [3, [4, [5]]]], 6])); //  [1, 2, 3, 4, 5, 6]
+console.log(arrayFlatRecursive([1, 2, 3])); // [1, 2, 3]
+console.log(arrayFlatRecursive([])); //  []
