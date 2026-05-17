@@ -12,7 +12,8 @@ function findSmallestElement(arr) {
     return "Input type Should be array"
 }
 
-console.log(findSmallestElement([1, 2, 3, 4, 5, 6, 7, 8, -1, -2])) // -2
+// Outputs:
+console.log(findSmallestElement([1, 2, 3, 4, 5, 6, 7, 8, -1, -2]))  // -2
 console.log(findSmallestElement([5])) // 5
 console.log(findSmallestElement()) // null
 

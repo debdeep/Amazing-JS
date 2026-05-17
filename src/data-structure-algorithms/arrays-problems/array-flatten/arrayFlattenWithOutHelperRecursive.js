@@ -14,6 +14,6 @@ function myArrayFlatten(arr) {
     return flattened;
 }
 
+//Outputs:
 console.log(myArrayFlatten([1, 2, [3, 4], [[5, 6]], [[[7, 8]]]])); // [1, 2, 3, 4, 5, 6, 7, 8]
-
 console.log(myArrayFlatten([])); // []

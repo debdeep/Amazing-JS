@@ -11,6 +11,7 @@ function largestElement(arr) {
     return largest; // Return the largest element
 }
 
-console.log(largestElement([3, 1, 4, 1, 5, 9]));     // Output: 9
-console.log(largestElement([-1, -5, -3]));       // Output: -1
-console.log(largestElement([]));     // Output: null
+// Outputs:
+console.log(largestElement([3, 1, 4, 1, 5, 9]));     // 9
+console.log(largestElement([-1, -5, -3]));       // -1
+console.log(largestElement([]));     // null

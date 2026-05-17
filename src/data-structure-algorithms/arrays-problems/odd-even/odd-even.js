@@ -16,7 +16,7 @@ function separateOddEven(arr) {
     return { "Odd Numbers": odd, "Even Numbers": even };
 }
 
-//input:
+// Outputs::
 console.log(separateOddEven([1, 2, 3, 4, 5, 6, 7, 8, 9])); //{Odd Numbers: Array(5), Even Numbers: Array(4)}
 console.log(separateOddEven([]));  //null
 console.log(separateOddEven([1])); // {Odd Numbers: Array(1), Even Numbers: Array(0)}
