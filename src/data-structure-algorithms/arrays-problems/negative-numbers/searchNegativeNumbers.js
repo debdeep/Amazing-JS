@@ -9,6 +9,7 @@ function searchNegativeNumbers(arr) {
     return negativeNumberList;
 }
 
+//Outputs:
 console.log(searchNegativeNumbers([1, 2, 3, -1, -6, -1])) // [-1, -6, -1]
 console.log(searchNegativeNumbers([1,2,3])) // []
 console.log(searchNegativeNumbers([])) // []

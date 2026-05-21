@@ -9,4 +9,5 @@ function recursiveSumOfElements(array, arrayLength) {
 
 }
 
+//Outputs:
 console.log(recursiveSumOfElements(array, array.length));

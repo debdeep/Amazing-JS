@@ -9,6 +9,6 @@ function arrayFlatRecursive(arr) {
 
 //Outputs:
 console.log(arrayFlatRecursive([1, 2, [3, 4], [[5, 6]], [[[7, 8]]]])); // [1, 2, 3, 4, 5, 6, 7, 8]
-console.log(arrayFlatRecursive([1, [2, [3, [4, [5]]]], 6])); //  [1, 2, 3, 4, 5, 6]
+console.log(arrayFlatRecursive([1, [2, [3, [4, [5]]]], 6])); // [1, 2, 3, 4, 5, 6]
 console.log(arrayFlatRecursive([1, 2, 3])); // [1, 2, 3]
-console.log(arrayFlatRecursive([])); //  []
+console.log(arrayFlatRecursive([])); // []

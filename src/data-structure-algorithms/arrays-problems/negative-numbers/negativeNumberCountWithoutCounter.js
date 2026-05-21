@@ -9,6 +9,6 @@ function negativeNumbersCount(arr) {
     return negativeNumberList.length;
 }
 
+//Outputs:
 console.log(negativeNumbersCount([1, 2, 3, -1, -6, -1])) // 3
-
 console.log(negativeNumbersCount([])) // 0

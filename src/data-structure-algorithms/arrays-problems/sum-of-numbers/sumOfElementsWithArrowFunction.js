@@ -3,4 +3,5 @@ const recursiveSum = (array, len = array.length) => {
 
 }
 
-console.log(recursiveSum([10, 20, 30, 40, 50]));
+//Outputs:
+console.log(recursiveSum([10, 20, 30, 40, 50])); // 150
