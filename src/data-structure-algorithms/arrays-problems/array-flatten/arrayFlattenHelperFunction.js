@@ -1,10 +1,10 @@
-/** * Function to flatten an array recursively using the built-in flat method.
+/* Function to flatten an array recursively using the built-in flat method.
  * @param {Array} arr - The array to be flattened.
  * @returns {Array} - The flattened array.
  */
 
 function arrayFlatRecursive(arr) {
-    return arr.flat(Infinity); // Using the built-in flat method with Infinity depth to flatten the array recursively
+    return arr.flat(Infinity);
 }
 
 //Outputs:
