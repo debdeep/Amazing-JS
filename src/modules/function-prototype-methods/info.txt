@@ -1,0 +1,8 @@
+Call(), apply(), and bind() are methods on Function.prototype.They let us explicitly set this when invoking functions.
+call and apply run immediately, while bind returns a new function with a fixed this for later use.
+
+call → invoke immediately, arguments as list.
+
+apply → invoke immediately, arguments as array.
+
+bind → returns a new function with bound this (invoke later).
