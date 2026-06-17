@@ -26,7 +26,7 @@
 */
 function sumOfArrayElements(nums, n = nums.length) {
     if (n === 0) return 0;
-    //console.log('Log:', nums[n - 1], n - 1)
+    console.log(`nums[${n-1}] + sumOfArrayElements(${nums}, ${n - 1})`);
     return nums[n - 1] + sumOfArrayElements(nums, n - 1);
 
 }
