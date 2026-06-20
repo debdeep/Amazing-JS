@@ -32,4 +32,4 @@ console.log(binarySearch([0, 1, 1, 2, 3], 1));  // 2
 console.log(binarySearch([-1, 0, 2, 2, 4], 4)); // 4
 console.log(binarySearch([0, 1, 2, 3, 5, 8, 13, 21, 34], 13)); // 6
 console.log(binarySearch([0, 1, 2, 3, 5, 8, 13, 21, 34], 35)); // -1
-console.log(binarySearch([5], 5)); // -1
+console.log(binarySearch([5], 5)); // 0
