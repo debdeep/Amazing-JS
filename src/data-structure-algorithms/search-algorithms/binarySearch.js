@@ -5,7 +5,9 @@
             Then we should check whether median index element is < target then right side we need to search only(as sorted array) and continue the same again and during that left pointer will become (median index + 1).
             if median index element is > target and do the above on the left side as target is smaller and right pointer will be (median index - 1)
     Only catch is that it can be applied to ONLY arrays which are sorted 
-    Complexity:  Time: Worst Case O(logN) & Best Case O(1) when element found at first index | Space: O(1) during iterative & O(logn) during recursive
+    Complexity: 
+    Time: Worst Case: O(logN) |  Best Case: O(1) when element found at first index 
+    Space: O(1) during iterative |  O(logn) during recursive
 */
 
 function binarySearch(nums, target) {
