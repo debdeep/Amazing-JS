@@ -1,6 +1,7 @@
 function lastWordLengthWithoutHelper(line) {
     let n = line.length - 1;
     let count = 0;
+    //trim white spaces at end
     while (n >= 0) {
         if (line[n] === " ") {
             --n;
