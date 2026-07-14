@@ -6,9 +6,9 @@
     Usage: Callbacks, closures, inline
 */
 
-console.log(add(5, 10)); // Uncaught ReferenceError: Cannot access 'add' before initialization
+//console.log(add(5, 10)); // Uncaught ReferenceError: Cannot access 'add' before initialization
 
 const add = function (a, b) {
     return a + b;
 }
-// console.log(add(5, 10)); // 15 
+console.log(add(5, 10)); // 15 
