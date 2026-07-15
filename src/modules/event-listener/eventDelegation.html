@@ -1,0 +1,17 @@
+<!--
+    Definition: Instead of attaching listeners to many child elements, attach one listener to a parent and use event bubbling to catch events
+    Advantage: Efficient, especially when elements are dynamically added/removed. 
+ -->
+<ul id="list">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ul>
+
+<script>
+    document.getElementById("list").addEventListener("click", (event) => {
+        if (event.target.tagName === "LI") {
+            console.log("Clicked:", event.target.textContent);
+        }
+    });
+</script>

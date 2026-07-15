@@ -1,0 +1,18 @@
+<!-- Example demonstrating event bubbling:
+     Clicking the child button triggers both child and parent listeners,
+     unless stopPropagation() is used to stop the event from bubbling up. -->
+
+<div id="parent">
+    <button id="child">Click Me</button>
+</div>
+
+<script>
+    document.getElementById("parent").addEventListener("click", () => {
+        console.log("Parent clicked");
+    });
+
+    document.getElementById("child").addEventListener("click", (event) => {
+        console.log("Child clicked");
+        // event.stopPropagation(); // stops bubbling from child to parent
+    });
+</script>

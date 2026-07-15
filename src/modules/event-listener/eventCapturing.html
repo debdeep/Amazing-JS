@@ -1,0 +1,30 @@
+<!--
+    Definition: The event travels from the root (document/window) down through ancestors until it reaches the target.
+    Usage: Rarely Used | If you add a listener with addEventListener(event, handler, true), it runs during capturing.
+
+    TIPS: The event flows top → down before hitting the target.
+ -->
+<html>
+<div id="outer">
+    <div id="inner">
+        <button id="child">Click Me</button>
+    </div>
+</div>
+
+<script>
+    document.getElementById("outer").addEventListener("click", () => {
+        console.log("Outer capturing");
+    }, true);
+
+    document.getElementById("inner").addEventListener("click", () => {
+        console.log("Inner capturing");
+    }, true);
+
+    document.getElementById("child").addEventListener("click", () => {
+        console.log("Child clicked");
+    });
+</script>
+
+</html>
+
+<!-- Outer capturing, Inner capturing, Child clicked -->
