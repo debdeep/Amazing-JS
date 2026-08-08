@@ -1,0 +1,13 @@
+<!-- index.html -->
+<button id="btn">Start Worker</button>
+<script>
+    const worker = new Worker("worker.js");
+
+    document.getElementById("btn").addEventListener("click", () => {
+        worker.postMessage(1000000); // send data
+    });
+
+    worker.onmessage = (event) => {
+        console.log("Result:", event.data);
+    };
+</script>
