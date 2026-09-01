@@ -13,7 +13,7 @@ const nestedObj = {
 
 function flattenObject(obj, prefix = '') {
     let result = {}
-    if (typeof obj !== 'object' || obj === null) return null;
+    if (typeof obj !== 'object' || obj === null) return result;
     for (const key in obj) {
         if (!obj.hasOwnProperty(key)) continue;
 
