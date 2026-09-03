@@ -20,3 +20,4 @@ function sumHighestVowelConsonant(s) {
 //Output:
 console.log(sumHighestVowelConsonant("debajo"));
 console.log(sumHighestVowelConsonant("success"));
+console.log(sumHighestVowelConsonant(""));
