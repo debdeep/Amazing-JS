@@ -6,6 +6,7 @@
 function reverseStringInterval(str, k) {
     let arr = str.split(""); // convert to array
     for (let i = 0; i < arr.length; i = i + 2 * k) {
+        console.log(arr[i]);
         let left = i;
         let right = Math.min(i + k - 1, arr.length - 1);
 
