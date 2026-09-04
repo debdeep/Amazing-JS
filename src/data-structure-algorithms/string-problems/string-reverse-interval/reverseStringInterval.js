@@ -6,9 +6,11 @@
 function reverseStringInterval(str, k) {
     let arr = str.split(""); // convert to array
     for (let i = 0; i < arr.length; i = i + 2 * k) {
-        console.log(arr[i]);
         let left = i;
+        console.log(arr[left]);
         let right = Math.min(i + k - 1, arr.length - 1);
+        console.log(arr[right]);
+        console.log('------Iteration Finished-------');
 
         while (left < right) {
             [arr[left], arr[right]] = [arr[right], arr[left]];
@@ -20,4 +22,4 @@ function reverseStringInterval(str, k) {
 }
 
 //Output:-
-console.log(reverseStringInterval("abcdefghijkl", 4));
+console.log(reverseStringInterval("abcdefghijkl", 2));
