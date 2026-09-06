@@ -25,5 +25,6 @@ function phasePalindromeCheck(str) {
     return true;
 }
 
+//Output:
 console.log(phasePalindromeCheck("A man, a plan, a canal: Panama"));
 console.log(phasePalindromeCheck(" "));

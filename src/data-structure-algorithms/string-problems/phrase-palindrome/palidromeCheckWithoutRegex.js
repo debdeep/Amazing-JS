@@ -15,6 +15,7 @@ function palindromeCheck(s) {
     return filteredString === rev;
 }
 
+//Output:
 console.log(palindromeCheck("A man, a plan, a canal: Panama"));
 console.log(palindromeCheck(" "));
 console.log(palindromeCheck("Man a Man"));
