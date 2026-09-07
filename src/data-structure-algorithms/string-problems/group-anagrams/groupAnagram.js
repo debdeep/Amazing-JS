@@ -8,7 +8,7 @@ function groupAnagrams(strs) {
     let map = {};
     for (let word of strs) {
         // Normalize: sort words by characters
-        let key = word.split("").sort().join("");
+        let key = word.split("").sort().join("");  //T: O(n * mlog(n)) | S: O(n * m) (n -> number of strings, m -> max length of each string)
         //console.log("key:", key);
 
         if (!map[key]) {
