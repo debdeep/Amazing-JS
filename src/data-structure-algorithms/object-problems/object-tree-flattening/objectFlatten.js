@@ -1,10 +1,16 @@
 // Example
-const nestedObj = {
+const sourceObject = {
     user: {
         name: "Debdeep",
         address: {
-            city: "Pune",
-            pin: 411001
+            current: {
+                city: "Pune",
+                pin: 411001
+            },
+            permanent: {
+                city: "Panagarh",
+                pin: 713148
+            }
         }
     },
     role: "Engineer",
@@ -35,22 +41,25 @@ function flattenObject(obj, prefix = '') {
         } else if (typeof value === "object" && value !== null && !Array.isArray(value)) {  //object keys logic
             //console.log("Object Found:", value);
             Object.assign(result, flattenObject(value, newKey))
-        } else {    //normal root level keys logic
-            result[newKey] = value;
+        } else {
+            result[newKey] = value; //normal root level keys logic
         }
     }
     return result;
 }
 
+// Output:
 
-console.log(flattenObject(nestedObj));
+console.log(flattenObject(sourceObject));
 /*
 {
-  "user.name": "Debdeep",
-  "user.address.city": "Pune",
-  "user.address.pin": 411001,
-  "role": "Engineer"
-  "phones.0": "Phone 1",
-  "phones.1": "Phone 2",
+  'user.name': 'Debdeep',
+  'user.address.current.city': 'Pune',
+  'user.address.current.pin': 411001,
+  'user.address.permanent.city': 'Panagarh',
+  'user.address.permanent.pin': 713148,
+  role: 'Engineer',
+  'phones.0': 'Phone 1',
+  'phones.1': 'Phone 2'
 }
 */
