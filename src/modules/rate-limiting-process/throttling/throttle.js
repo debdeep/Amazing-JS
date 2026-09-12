@@ -1,13 +1,16 @@
 let currentController; // keep track of the active request
 
-// Throttle utility
+// Throttle rate limiting function which will be called only at specific time interval.
 function throttle(func, limit) {
-    let inThrottle;
+    let inThrottle = true;
     return function (...args) {
-        if (!inThrottle) {
+        if (inThrottle) {
             func.apply(this, args);
-            inThrottle = true;
-            setTimeout(() => (inThrottle = false), limit);
+            inThrottle = false;
+
+            setTimeout(() => {
+                inThrottle = true
+            }, limit);
         }
     };
 }
@@ -54,7 +57,7 @@ async function callAPI(query) {
     }
 }
 
-// Attach throttled handler to input
+// Attached throttled handler to input
 document.addEventListener("DOMContentLoaded", () => {
     const inputBox = document.getElementById("search");
     inputBox.addEventListener("input", throttle((e) => {
