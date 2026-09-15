@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Multiple Progress Bars!</title>
+</head>
+
+<body>
+    <h1 class="title">Progress Bars</h1>
+
+    <!-- Predefined bars in HTML -->
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    let progress_percentage_array = [5, 10, 20, 50, 95, 100];
+    const bars = document.querySelectorAll(".inner");
+
+    bars.forEach((bar, index) => {
+        setTimeout(() => {
+            let progress = progress_percentage_array[index];
+            bar.style.width = progress + "%";
+            bar.textContent = progress + "%";
+
+            // Apply color based on value
+            if (progress < 10) {
+                bar.style.backgroundColor = "red";
+            } else if (progress >= 10 && progress <= 90) {
+                bar.style.backgroundColor = "yellow";
+                bar.style.color = "black"; // better contrast on yellow
+            } else {
+                bar.style.backgroundColor = "green";
+            }
+        }, index * 500); // staggered updates
+    });
+</script>
+
+<style>
+    .title {
+        text-align: center;
+    }
+
+    .outer {
+        border: 1px solid red;
+        border-radius: 10px;
+        overflow: hidden;
+        width: 100%;
+        height: 20px;
+        margin: 10px 0;
+    }
+
+    .inner {
+        height: 100%;
+        text-align: center;
+        line-height: 20px;
+        transition: width 0.5s ease;
+        color: white;
+        /* default text color */
+    }
+</style>
