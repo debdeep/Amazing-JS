@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Progress Bar!</title>
+</head>
+
+<body>
+    <h1 class="title">Progress Bar</h1>
+    <div class="outer" id="outer_part">
+        <div class="inner" id="inner_part">
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    let progress_percentage_array = [0, 10, 20, 50, 90];
+    const inner_div = document.getElementById("inner_part");
+    progress_percentage_array.forEach((progress, index) => {
+        setTimeout(() => {
+            //to generate delay in between progress changes
+            inner_div.style.width = progress + "%";
+            inner_div.textContent = progress + "%";
+        }, index * 300);
+    })
+</script>
+
+<style>
+    .title {
+        text-align: center;
+    }
+
+    .outer {
+        border: 1px solid red;
+        border-radius: 10px;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .inner {
+        background-color: green;
+        text-align: center;
+        color: white;
+    }
+</style>
