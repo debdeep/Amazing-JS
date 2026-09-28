@@ -12,11 +12,12 @@ function printMessage() {
     console.log("This is a hoisted function.");
 }
 
+// functionExpression(); // Output: ReferenceError: Cannot access 'functionExpression' before initialization | Invalid call in case of FE
+
 /* 
     Function Expression Example 
 */
-//functionExpression(); // Output: ReferenceError: Cannot access 'functionExpression' before initialization
 const functionExpression = function () {
     console.log("This is a function expression.");
 }
-functionExpression(); // Output: This is a function expression.
+functionExpression(); // Output: This is a function expression. | valid call in case of FE
