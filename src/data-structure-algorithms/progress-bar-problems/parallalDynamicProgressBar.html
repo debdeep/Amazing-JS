@@ -42,7 +42,7 @@
             bar.style.width = progress + "%";
             bar.textContent = progress + "%";
 
-            // Apply color based on value
+            // Apply color based on progress values
             if (progress < 10) {
                 bar.style.backgroundColor = "red";
             } else if (progress >= 10 && progress <= 90) {
@@ -61,7 +61,7 @@
     }
 
     .outer {
-        border: 1px solid red;
+        border: 1px solid black;
         border-radius: 10px;
         overflow: hidden;
         width: 100%;
