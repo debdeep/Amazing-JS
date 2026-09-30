@@ -2,7 +2,7 @@ Array.prototype.myIncludes = function (target) {
     //console.log("Context value:", this);
     for (let index = 0; index < this.length; index++) {
         let item = this[index];
-        console.log("item:", item);
+        //console.log("item:", item);
         if (item === target) {
             return true;
         } else {
