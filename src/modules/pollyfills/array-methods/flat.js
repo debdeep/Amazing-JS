@@ -1,25 +1,26 @@
+Array.prototype.myFlat = function (depth = 1) {
+    const result = [];
 
-
-Array.prototype.flat = function myFlat(depth = 0) {
-    const flattenedResult = [];
-    function flatten(arr, d) {
+    function flatten(arr, currentDepth) {
         for (let i = 0; i < arr.length; i++) {
-            if (Array.isArray(arr[i]) && d < depth) {
-                //console.log('Element is an array:', arr[i]);
-                flatten(arr[i], d + 1);
+            if (Array.isArray(arr[i]) && currentDepth < depth) {
+                flatten(arr[i], currentDepth + 1);
             } else {
-                //console.log('Element is not an array:', arr[i]);
-                flattenedResult.push(arr[i]);
+                result.push(arr[i]);
             }
         }
     }
-    flatten(this, 0)
-    return flattenedResult;
-}
 
+    flatten(this, 0); // 👈 here `this` is the array you called `.myFlat()` on
+    return result;
+};
+
+// Demo
 const arr = [1, 2, 3, [5, 6, [7, 8]]];
 const emptyArr = [];
-console.log('arr.flat(1):', arr.flat(1)); // Output: [1, 2, 3, 5, 6, [7, 8]]
-console.log('arr.flat(2):', arr.flat(2)); // Output: [1, 2, 3, 5, 6, 7, 8]
-console.log('arr.flat():', arr.flat()); // Output: [1, 2, 3, 5, 6, [7, 8]]
-console.log('emptyArr.flat():', emptyArr.flat()); // Output: []
+
+console.log(arr.myFlat(Infinity)); // [1, 2, 3, 5, 6, 7, 8] -> flattens till Infinity depth.
+console.log(arr.myFlat(1)); // [1, 2, 3, 5, 6, [7, 8]] -> flattens one level.
+console.log(arr.myFlat(2)); // [1, 2, 3, 5, 6, 7, 8] -> flattens two level.
+console.log(arr.myFlat());  // [1, 2, 3, 5, 6, [7, 8]] defaults to depth = 1.
+console.log(emptyArr.myFlat()); // []
